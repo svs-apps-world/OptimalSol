@@ -84,6 +84,7 @@
         android:text="Login"
         android:minWidth="180dp"
         android:textColor="@color/black"
+        android:onClick="onLoginButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
