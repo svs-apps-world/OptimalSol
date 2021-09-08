@@ -6,8 +6,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TicketsActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:text="Optimal \nSolutions"
+        android:textColor="@color/black"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_yellow"
+        android:orientation="vertical"
+        android:padding="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ExistingTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -16,5 +42,16 @@
         android:textColor="@color/black"
         android:onClick="onExistingTicketButtonClick"
          />
+    <Button
+        android:id="@+id/NewTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="New Ticket"
+        android:minWidth="180dp"
+        android:textColor="@color/black"
+        android:onClick="onNewTicketButtonClick"
+        />
+    </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

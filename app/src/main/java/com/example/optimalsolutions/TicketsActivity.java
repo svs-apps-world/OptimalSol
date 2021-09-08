@@ -16,4 +16,7 @@ public class TicketsActivity extends AppCompatActivity {
     public void onExistingTicketButtonClick(View view){
         startActivity(new Intent(this, ExistingTicketActivity.class));
     }
+    public void onNewTicketButtonClick(View view){
+        startActivity(new Intent(this, NewTicketActivity.class));
+    }
 }

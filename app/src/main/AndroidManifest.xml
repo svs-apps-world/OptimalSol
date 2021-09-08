@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OptimalSolutions">
-        <activity android:name=".NewTicketActivity"></activity>
+        <activity android:name=".Ticket1"></activity>
+        <activity android:name=".NewTicketActivity" />
         <activity android:name=".ExistingTicketActivity" />
         <activity android:name=".TicketsActivity" />
         <activity android:name=".MainActivity">
