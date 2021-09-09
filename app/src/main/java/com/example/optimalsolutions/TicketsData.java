@@ -1,5 +1,7 @@
 package com.example.optimalsolutions;
 
+import java.io.Serializable;
+
 public class TicketsData {
 
     String title;
@@ -8,6 +10,9 @@ public class TicketsData {
     String resolution;
     String dateOfIssue;
     long id;
+
+    public TicketsData() {
+    }
 
     public TicketsData(String title) {
         this.title = title;
