@@ -16,7 +16,7 @@
             android:name=".ui.login.Fault_report"
             android:exported="true"
             android:label="@string/title_activity_fault_report" />
-        <activity android:name=".Ticket1" />
+        <activity android:name=".ExistingTicketInfo" />
         <activity android:name=".NewTicketActivity" />
         <activity android:name=".ExistingTicketActivity" />
         <activity android:name=".TicketsActivity" />

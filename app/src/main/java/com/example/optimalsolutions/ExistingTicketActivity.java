@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -63,7 +62,7 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
 
     @Override
     public void onClick(TicketsData item) {
-        Intent intent = new Intent(this, Ticket1.class);
+        Intent intent = new Intent(this, ExistingTicketInfo.class);
         intent.putExtra("bundle", (new Gson()).toJson(item));
         startActivity(intent);
     }
