@@ -33,7 +33,7 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
 
     private void createTicketData() {
         TicketsData data = new TicketsData(
-                "Refrigerator", //Title
+                "Refigerator", //Title
                 "Fridge not starting",
                 "No cooling. No light in Refrigerator", // Description
                 "Check with power socket", //Resolution
@@ -42,11 +42,19 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
         mDataList.add(data);
 
         data = new TicketsData(
-                "FAN", //Title
-                "Fridge not starting",
-                "No cooling. No light in Refrigerator", // Description
-                "Check with power socket", //Resolution
-                "8th of Sept" //DateOfIssue
+                "Microwave Oven", //Title
+                "Items not heating",
+                "No heating. only light lits up when turned on", // Description
+                "Engineer replaced the Magnetron", //Resolution
+                "18th of Jan" //DateOfIssue
+        );
+        mDataList.add(data);
+        data = new TicketsData(
+                "Smart TV", //Title
+                "Internet not working",
+                "Unable to connect to Internet", // Description
+                "Wifi blocking IP address 192.168.42.1", //Resolution
+                "10th of Aug" //DateOfIssue
         );
         mDataList.add(data);
     }
