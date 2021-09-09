@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 public class ExistingTicketActivity extends AppCompatActivity implements ExistingTicketItemClickListener {
@@ -61,6 +63,8 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
 
     @Override
     public void onClick(TicketsData item) {
-        startActivity(new Intent(this, Ticket1.class));
+        Intent intent = new Intent(this, Ticket1.class);
+        intent.putExtra("bundle", (new Gson()).toJson(item));
+        startActivity(intent);
     }
 }
