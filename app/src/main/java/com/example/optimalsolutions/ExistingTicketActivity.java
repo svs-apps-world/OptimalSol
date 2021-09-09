@@ -24,8 +24,31 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
         for (int i = 0; i < 20; i++) {
             mDataList.add(new TicketsData("Ticket " + i));
         }
+
+        createTicketData();
+
         mRecyclerView.setAdapter(new ExistingTicketsAdapter(this, mDataList, this));
         mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
+    }
+
+    private void createTicketData() {
+        TicketsData data = new TicketsData(
+                "Refrigerator", //Title
+                "Fridge not starting",
+                "No cooling. No light in Refrigerator", // Description
+                "Check with power socket", //Resolution
+                "8th of Sept" //DateOfIssue
+        );
+        mDataList.add(data);
+
+        data = new TicketsData(
+                "FAN", //Title
+                "Fridge not starting",
+                "No cooling. No light in Refrigerator", // Description
+                "Check with power socket", //Resolution
+                "8th of Sept" //DateOfIssue
+        );
+        mDataList.add(data);
     }
 
     @Override

@@ -13,12 +13,12 @@ public class TicketsData {
         this.title = title;
     }
 
-    public TicketsData(String title, String issue, String description, String resolution, String dateOfIssue, long id) {
+    public TicketsData(String title, String issue, String description, String resolution, String dateOfIssue) {
         this.title = title;
         this.issue = issue;
         this.description = description;
         this.resolution = resolution;
         this.dateOfIssue = dateOfIssue;
-        this.id = id;
+        this.id = System.currentTimeMillis();
     }
 }
