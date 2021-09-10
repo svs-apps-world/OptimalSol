@@ -1,10 +1,8 @@
 package com.example.optimalsolutions;
 
-import java.io.Serializable;
-
 public class TicketsData {
 
-    String title;
+    String equipmentName;
     String issue;
     String description;
     String resolution;
@@ -14,12 +12,12 @@ public class TicketsData {
     public TicketsData() {
     }
 
-    public TicketsData(String title) {
-        this.title = title;
+    public TicketsData(String equipmentName) {
+        this.equipmentName = equipmentName;
     }
 
-    public TicketsData(String title, String issue, String description, String resolution, String dateOfIssue) {
-        this.title = title;
+    public TicketsData(String equipmentName, String issue, String description, String resolution, String dateOfIssue) {
+        this.equipmentName = equipmentName;
         this.issue = issue;
         this.description = description;
         this.resolution = resolution;

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/light_yellow"
+    android:background="@drawable/orange_background"
+
     tools:context=".FaultReport">
 
 
@@ -38,8 +39,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/rounded_background_yellow"
         android:orientation="vertical"
+        android:background="@drawable/orange_background"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +48,7 @@
 
 
         <TextView
-            android:id="@+id/EquipmentTexView"
+            android:id="@+id/equipmentTexView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -56,11 +57,11 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/EquipmentEditText"
+            android:id="@+id/equipmentEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@drawable/rounded_background_orange"
+            android:background="@drawable/rounded_background_yellow"
             android:ems="10"
             android:hint="Name faulty equipment "
             android:inputType="textPersonName"
@@ -81,9 +82,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@drawable/rounded_background_orange"
+            android:background="@drawable/rounded_background_yellow"
             android:ems="10"
             android:hint="Enter todays date"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="4dp" />
+        <TextView
+            android:id="@+id/IssueTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Issue"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/IssueEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:hint="Enter issue"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:padding="4dp" />
@@ -102,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="30mm"
             android:layout_margin="8dp"
-            android:background="@drawable/rounded_background_orange"
+            android:background="@drawable/rounded_background_yellow"
             android:ems="10"
             android:hint="Briefly explain the problem"
             android:inputType="textPersonName"
@@ -118,6 +139,7 @@
 
             android:text="Submit"
             android:textColor="@color/black"
+            android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

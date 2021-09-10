@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,7 +49,7 @@ public class ExistingTicketsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         }
 
         public void bind(TicketsData item, ExistingTicketItemClickListener listener) {
-            existingTicketTitle.setText(item.title);
+            existingTicketTitle.setText(item.equipmentName);
             itemView.setOnClickListener(v -> listener.onClick(item));
         }
     }
