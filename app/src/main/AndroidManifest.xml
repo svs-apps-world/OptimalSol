@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OptimalSolutions">
+        <activity android:name=".CreateNewTicketActivity"></activity>
         <activity
             android:name=".FaultReport"
             android:exported="true" />
