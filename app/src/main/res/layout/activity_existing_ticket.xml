@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    
+    android:background="@drawable/orange_background"
     tools:context=".ExistingTicketActivity">
     <TextView
         android:id="@+id/existingTicketsTitleTextView"
@@ -34,7 +34,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_background_orange"
+        android:background="@drawable/rounded_background_yellow"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
