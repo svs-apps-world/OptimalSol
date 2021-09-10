@@ -16,8 +16,8 @@
 
     <Button
         android:id="@+id/ExistingTickets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="142dp"
         android:layout_marginBottom="32dp"
         android:text="Existing Tickets"
         android:minWidth="180dp"
@@ -32,8 +32,8 @@
         />
     <Button
         android:id="@+id/NewTicket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="142dp"
         android:layout_marginBottom="32dp"
         android:text="New Ticket"
         android:minWidth="180dp"
