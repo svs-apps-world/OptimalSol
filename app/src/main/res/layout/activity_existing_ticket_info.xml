@@ -1,121 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/orange_background"
+    android:orientation="vertical"
+    tools:context=".ExistingTicketInfo">
 
-    tools:context=".ExistingTicketInfo"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/equipmentTexView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:text="Equipment"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/equipmentValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/rounded_background_yellow"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        android:minHeight="20dp"
-        android:padding="4dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/equipmentTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Equipment"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/equipmentValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="20dp"
+            android:padding="4dp"
+            android:textSize="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
-    <TextView
-        android:id="@+id/dateOfIssueTexView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:text="Date of Issue"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dateOfIssueTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Date of Issue"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/dateOfIssueValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/rounded_background_yellow"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        android:minHeight="20dp"
-        android:padding="4dp" />
-    <TextView
-        android:id="@+id/issueTexView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:text="Issue"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dateOfIssueValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="20dp"
+            android:padding="4dp"
+            android:textSize="15dp" />
 
-    <TextView
-        android:id="@+id/issueValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/rounded_background_yellow"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="20dp"
-        android:textSize="15dp"
-        android:padding="2dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/issueTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Issue"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/descriptionTexView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:textSize="20dp"
-        android:text="Description"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/issueValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="20dp"
+            android:padding="2dp"
+            android:textSize="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/descriptionValue"
-        android:layout_width="match_parent"
-        android:layout_height="30mm"
-        android:layout_margin="8dp"
-        android:background="@drawable/rounded_background_yellow"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        android:padding="4dp"
-        tools:ignore="SpeakableTextPresentCheck" />
-    <TextView
-        android:id="@+id/resolutionTexView"
-        android:layout_width="match_parent"
-        android:textSize="22dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:text="Resolution"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/descriptionTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/resolutionValue"
-        android:layout_width="match_parent"
-        android:layout_height="30mm"
-        android:layout_margin="8dp"
-        android:background="@drawable/rounded_background_yellow"
-        android:ems="10"
-        android:textSize="15dp"
-        android:inputType="textPersonName"
-        android:padding="4dp" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/descriptionValue"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="4dp"
+            android:textSize="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/resolutionTexView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Resolution"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resolutionValue"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background_yellow"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="4dp"
+            android:textSize="15dp" />
+    </LinearLayout>
+</ScrollView>

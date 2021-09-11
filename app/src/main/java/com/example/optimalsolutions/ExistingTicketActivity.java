@@ -22,9 +22,9 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
 
         mRecyclerView = findViewById(R.id.existingTicketsRecyclerView);
 
-        for (int i = 0; i < 20; i++) {
-            mDataList.add(new TicketsData("Ticket " + i));
-        }
+//        for (int i = 0; i < 20; i++) {
+//            mDataList.add(new TicketsData("Ticket " + i));
+//        }
 
         createTicketData();
 
