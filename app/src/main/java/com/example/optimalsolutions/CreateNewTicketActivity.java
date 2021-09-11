@@ -3,6 +3,7 @@ package com.example.optimalsolutions;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -134,7 +135,7 @@ public class CreateNewTicketActivity extends AppCompatActivity implements Create
         if (option.list != null) {
             mDataList.add(new ChatData(false, "Please select from following:", ChatData.CHAT_TYPE.TEXT));
             mAdapter.notifyItemInserted(mDataList.size() - 1);
-            mRecyclerView.scrollToPosition(mDataList.size() - 1);
+//            mRecyclerView.scrollToPosition(mDataList.size() - 1);
 
             ChatData chatData = new ChatData(false, "Please select from following:", ChatData.CHAT_TYPE.TEXT);
             chatData.options = option.list;
@@ -145,7 +146,16 @@ public class CreateNewTicketActivity extends AppCompatActivity implements Create
         } else {
             mDataList.add(new ChatData(true, "Awesome! You are all done!", ChatData.CHAT_TYPE.TEXT));
             mAdapter.notifyItemInserted(mDataList.size() - 1);
+//            mRecyclerView.scrollToPosition(mDataList.size() - 1);
+
+            mDataList.add(new ChatData(true, "", ChatData.CHAT_TYPE.MULTISELECT));
+            mAdapter.notifyItemInserted(mDataList.size() - 1);
             mRecyclerView.scrollToPosition(mDataList.size() - 1);
         }
+    }
+
+    @Override
+    public void onCreateManualTicketButtonClicked() {
+        startActivity(new Intent(this, FaultReport.class));
     }
 }

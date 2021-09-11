@@ -1,51 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/orange_background"
-
+    android:orientation="vertical"
     tools:context=".FaultReport">
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="Fault Report"
-        android:layout_marginBottom="12dp"
-
-        android:textColor="@color/black"
-        android:textSize="44sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/black"
-/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/orange_background"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="Fault Report"
 
+            android:textColor="@color/black"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/black" />
 
         <TextView
             android:id="@+id/equipmentTexView"
@@ -88,6 +80,7 @@
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:padding="4dp" />
+
         <TextView
             android:id="@+id/IssueTexView"
             android:layout_width="match_parent"
@@ -121,28 +114,23 @@
         <EditText
             android:id="@+id/userNameEditText"
             android:layout_width="match_parent"
-            android:layout_height="30mm"
+            android:layout_height="100dp"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_background_yellow"
             android:ems="10"
             android:hint="Briefly explain the problem"
-            android:inputType="textPersonName"
             android:padding="4dp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:minWidth="180dp"
-            android:layout_gravity="center"
-
             android:text="Submit"
-            android:textColor="@color/black"
-            android:background="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textColor="@color/black" />
 
     </LinearLayout>
-</androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

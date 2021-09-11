@@ -21,8 +21,9 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     private ArrayList<ChatData> mDataList;
     private CreateNewTicketChatOptionListener mListener;
     private int MY_TEXT_VIEW_TYPE = 0;
-    private int OTHER_PARTY_VIEW_TYPE = 1;
-    private int OTHER_PARTY_OPTIONSVIEW_TYPE = 2;
+    private int MY_TEXT_OPTIONS_TYPE = 1;
+    private int OTHER_PARTY_VIEW_TYPE = 2;
+    private int OTHER_PARTY_OPTIONSVIEW_TYPE = 3;
 
     public CreateNewTicketAdapter(Context mContext, ArrayList<ChatData> mDataList, CreateNewTicketChatOptionListener mListener) {
         this.mContext = mContext;
@@ -35,6 +36,8 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == MY_TEXT_VIEW_TYPE) {
             return new CreateNewTicketAdapter.MyTextItemViewHolder(LayoutInflater.from(mContext).inflate(R.layout.chat_my_text_list_item, parent, false));
+        } else if (viewType == MY_TEXT_OPTIONS_TYPE) {
+            return new CreateNewTicketAdapter.MyOptionsItemViewHolder(LayoutInflater.from(mContext).inflate(R.layout.chat_my_multi_select_list_item, parent, false));
         } else if (viewType == OTHER_PARTY_OPTIONSVIEW_TYPE) {
             return new CreateNewTicketAdapter.OtherPArtyOptionsItemViewHolder(LayoutInflater.from(mContext).inflate(R.layout.chat_other_party_multi_select_list_item, parent, false));
         } else {
@@ -46,7 +49,11 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ChatData chatData = mDataList.get(position);
         if (chatData.isMyText) {
-            ((MyTextItemViewHolder) holder).bind(chatData, mListener);
+            if (chatData.chatType.equals(ChatData.CHAT_TYPE.MULTISELECT)) {
+                ((MyOptionsItemViewHolder) holder).bind(chatData, mListener);
+            } else {
+                ((MyTextItemViewHolder) holder).bind(chatData, mListener);
+            }
         } else {
             if (chatData.chatType.equals(ChatData.CHAT_TYPE.MULTISELECT)) {
                 ((OtherPArtyOptionsItemViewHolder) holder).bind(chatData, mListener);
@@ -60,7 +67,11 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public int getItemViewType(int position) {
         ChatData chatData = mDataList.get(position);
         if (chatData.isMyText) {
-            return MY_TEXT_VIEW_TYPE;
+            if (chatData.chatType.equals(ChatData.CHAT_TYPE.MULTISELECT)) {
+                return MY_TEXT_OPTIONS_TYPE;
+            } else {
+                return MY_TEXT_VIEW_TYPE;
+            }
         } else {
             if (chatData.chatType.equals(ChatData.CHAT_TYPE.MULTISELECT)) {
                 return OTHER_PARTY_OPTIONSVIEW_TYPE;
@@ -127,6 +138,22 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 button.setOnClickListener(v -> listener.onOptionSelected(item.options.get(finalI)));
                 linearLayout.addView(button);
             }
+        }
+    }
+
+    private class MyOptionsItemViewHolder extends RecyclerView.ViewHolder {
+
+        Button createManualTicketButton;
+
+        public MyOptionsItemViewHolder(@NonNull View itemView) {
+            super(itemView);
+            createManualTicketButton = itemView.findViewById(R.id.createManualTicketButton);
+        }
+
+        public void bind(ChatData item, CreateNewTicketChatOptionListener listener) {
+            createManualTicketButton.setOnClickListener(v -> {
+                listener.onCreateManualTicketButtonClicked();
+            });
         }
     }
 }
