@@ -27,12 +27,12 @@ public class CreateNewTicketActivity extends AppCompatActivity implements Create
     }
 
     private void populateData() {
-        mDataList.add(new ChatData(true, "Hi", ChatData.CHAT_TYPE.TEXT));
-        mDataList.add(new ChatData(false, "Hola", ChatData.CHAT_TYPE.TEXT));
-        mDataList.add(new ChatData(true, "Whats up", ChatData.CHAT_TYPE.TEXT));
-        mDataList.add(new ChatData(false, "I am good", ChatData.CHAT_TYPE.TEXT));
-        mDataList.add(new ChatData(true, "How are you doing", ChatData.CHAT_TYPE.TEXT));
-        mDataList.add(new ChatData(false, "How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing", ChatData.CHAT_TYPE.TEXT));
+        mDataList.add(new ChatData(true, "Hi\n How can I help you today", ChatData.CHAT_TYPE.TEXT));
+        mDataList.add(new ChatData(false, "Please select the Equipment", ChatData.CHAT_TYPE.TEXT));
+        //mDataList.add(new ChatData(true, "Whats up", ChatData.CHAT_TYPE.TEXT));
+        //mDataList.add(new ChatData(false, "I am good", ChatData.CHAT_TYPE.TEXT));
+        //mDataList.add(new ChatData(true, "How are you doing", ChatData.CHAT_TYPE.TEXT));
+       // mDataList.add(new ChatData(false, "How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing How are you doing", ChatData.CHAT_TYPE.TEXT));
 
         ArrayList<ChatData.Options> optionsData = new ArrayList<>();
         optionsData.add(new ChatData.Options("Refrigerator", getRefrigeratorOptions()));

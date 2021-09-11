@@ -32,15 +32,26 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
         mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
     }
 
+
     private void createTicketData() {
         TicketsData data = new TicketsData(
-                "Refigerator", //Title
+                "Refrigerator", //Title
                 "Fridge not starting",
                 "No cooling. No light in Refrigerator", // Description
-                "Check with power socket", //Resolution
+                "Power socket was faulty", //Resolution
                 "8th of Sept" //DateOfIssue
         );
+
         mDataList.add(data);
+        data = new TicketsData(
+                "Smart TV", //Title
+                "Internet not working",
+                "Unable to connect to Internet.", // Description
+                "Wifi blocking the Smart TV IP address i.e. 192.168.42.1 from connecting to internet. Please get this unblocked from your router settings. ", //Resolution
+                "10th of Aug" //DateOfIssue
+        );
+        mDataList.add(data);
+
 
         data = new TicketsData(
                 "Microwave Oven", //Title
@@ -48,14 +59,6 @@ public class ExistingTicketActivity extends AppCompatActivity implements Existin
                 "No heating. only light lits up when turned on", // Description
                 "Engineer replaced the Magnetron", //Resolution
                 "18th of Jan" //DateOfIssue
-        );
-        mDataList.add(data);
-        data = new TicketsData(
-                "Smart TV", //Title
-                "Internet not working",
-                "Unable to connect to Internet", // Description
-                "Wifi blocking IP address 192.168.42.1", //Resolution
-                "10th of Aug" //DateOfIssue
         );
         mDataList.add(data);
     }

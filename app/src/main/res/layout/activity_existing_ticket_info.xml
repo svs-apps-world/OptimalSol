@@ -99,7 +99,6 @@
             android:layout_margin="8dp"
             android:background="@drawable/rounded_background_yellow"
             android:ems="10"
-            android:inputType="textPersonName"
             android:padding="4dp"
             android:textSize="15dp"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -121,7 +120,6 @@
             android:layout_margin="8dp"
             android:background="@drawable/rounded_background_yellow"
             android:ems="10"
-            android:inputType="textPersonName"
             android:padding="4dp"
             android:textSize="15dp" />
     </LinearLayout>
