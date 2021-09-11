@@ -5,12 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_yellow"
     tools:context=".CreateNewTicketActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/createNewTicketRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="8dp"
+        android:clipToPadding="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </LinearLayout>

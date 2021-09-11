@@ -1,13 +1,16 @@
 package com.example.optimalsolutions;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -82,7 +85,6 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         public void bind(ChatData item, CreateNewTicketChatOptionListener listener) {
             chatText.setText(item.chatText);
-//            itemView.setOnClickListener(v -> listener.onClick(item));
         }
     }
 
@@ -96,29 +98,35 @@ public class CreateNewTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         public void bind(ChatData item, CreateNewTicketChatOptionListener listener) {
             chatText.setText(item.chatText);
-//            itemView.setOnClickListener(v -> listener.onClick(item));
         }
     }
 
     private class OtherPArtyOptionsItemViewHolder extends RecyclerView.ViewHolder {
-        Button option1;
-        Button option2;
-        Button option3;
+        LinearLayout linearLayout;
 
         OtherPArtyOptionsItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            option1 = itemView.findViewById(R.id.option1);
-            option2 = itemView.findViewById(R.id.option2);
-            option3 = itemView.findViewById(R.id.option3);
+            linearLayout = itemView.findViewById(R.id.chatMultiSelectLinearLayout);
         }
 
         public void bind(ChatData item, CreateNewTicketChatOptionListener listener) {
-            if (item.options.size() > 2) {
-                option1.setText(item.options.get(0));
-                option2.setText(item.options.get(1));
-                option3.setText(item.options.get(2));
+            linearLayout.removeAllViews();
+            for (int i = 0; i < item.options.size(); i++) {
+                Button button = new Button(itemView.getContext());
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                int margin = (int) itemView.getResources().getDimension(R.dimen.chat_option_button_margin);
+                layoutParams.setMargins(margin, margin, margin, margin);
+                button.setLayoutParams(layoutParams);
+                button.setBackground(ContextCompat.getDrawable(itemView.getContext(), R.drawable.rounded_background_yellow));
+                button.setAllCaps(false);
+                button.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
+                button.setText(item.options.get(i).header);
+                int padding = (int) itemView.getContext().getResources().getDimension(R.dimen.chat_option_button_padding);
+                button.setPadding(padding, padding, padding, padding);
+                int finalI = i;
+                button.setOnClickListener(v -> listener.onOptionSelected(item.options.get(finalI)));
+                linearLayout.addView(button);
             }
-//            itemView.setOnClickListener(v -> listener.onClick(item));
         }
     }
 }

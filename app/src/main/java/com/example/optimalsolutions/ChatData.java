@@ -15,9 +15,19 @@ public class ChatData {
         MULTISELECT
     }
 
+    public static class Options {
+        public String header;
+        public ArrayList<Options> list = null;
+
+        public Options(String header, ArrayList<Options> list) {
+            this.header = header;
+            this.list = list;
+        }
+    }
+
     public boolean isMyText;
     public String chatText;
     public CHAT_TYPE chatType;
-    public ArrayList<String> options = new ArrayList<>();
+    public ArrayList<Options> options = null;
 
 }

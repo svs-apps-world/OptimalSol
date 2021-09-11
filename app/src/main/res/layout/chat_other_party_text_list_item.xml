@@ -9,25 +9,27 @@
         android:id="@+id/chatTextRightGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
 
     <TextView
         android:id="@+id/chatText"
-        android:layout_width="0sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_background_orange"
         android:gravity="start"
         android:padding="8dp"
-        android:text=" public CHAT_TYPE chatType;"
+        android:text="bb"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/chatTextRightGuideline"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
